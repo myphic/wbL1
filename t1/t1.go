@@ -14,6 +14,7 @@ type Action struct {
 	Human
 }
 
+//Конструктор Human
 func (h *Human) newHuman(name, gender string, age int) {
 	h.Name = name
 	h.Gender = gender

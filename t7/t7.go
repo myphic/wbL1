@@ -8,7 +8,8 @@ import (
 func main() {
 	m := map[int]int{}
 	wg := sync.WaitGroup{}
-	mu := sync.Mutex{}
+	//С помощью мьютекса осуществляем конкурентную запись в мапу
+	var mu sync.Mutex
 	for i := 0; i < 5; i++ {
 		wg.Add(1)
 		go func(i int) {

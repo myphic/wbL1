@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+//Устанавливаем iтый бит с помощью побитовых операций
 func setBit(position int, number int64, setUnit bool) string {
 	if setUnit {
 		fmt.Printf("Число до преобразования: %s \n", strconv.FormatInt(number, 2))

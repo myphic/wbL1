@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//Функция переворота строки
 func strReverse(s string) string {
 	n := len(s)
 	runes := make([]rune, n)

@@ -11,7 +11,6 @@ func Reverse(input []string) []string {
 
 	for i, n := range input {
 		j := inputLen - i - 1
-
 		output[j] = n
 	}
 
@@ -19,7 +18,9 @@ func Reverse(input []string) []string {
 }
 
 func wordReverse(s string) string {
+	//Делим строку по пробелам
 	splitStr := strings.Split(s, " ")
+	//С помощью функции Reverse меняем элементы в нужном порядке и джойним обратно в строку
 	result := strings.Join(Reverse(splitStr), " ")
 	return result
 }

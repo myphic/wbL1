@@ -5,6 +5,7 @@ import (
 	"reflect"
 )
 
+//Используем reflect потому что switch type не может определить тип для канала
 func getType(variable interface{}) string {
 	v := reflect.ValueOf(variable)
 	switch v.Kind() {

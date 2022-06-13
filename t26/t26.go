@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+//Функция проверки строки на уникальные символы
 func checkUnique(s string) bool {
 	s = strings.ToLower(s)
 	m := make(map[rune]bool)

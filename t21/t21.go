@@ -27,7 +27,7 @@ type MyServiceAdapter struct {
 	myService *MyService
 }
 
-func (service MyServiceAdapter) Request() int32 {
+func (service *MyServiceAdapter) Request() int32 {
 	return int32(service.myService.weatherValue)
 }
 

@@ -5,6 +5,7 @@ import (
 	"sync"
 )
 
+//Структура счетчик с использованием мьютекса для того, чтобы получить корректный результат в конкурентной среде
 type Counter struct {
 	number int
 	mu     sync.Mutex
@@ -29,10 +30,10 @@ func main() {
 	for i := 0; i < 200; i++ {
 		wg.Add(1)
 
-		go func(num int, cnt *Counter, wg *sync.WaitGroup) {
+		go func(num int, cnt *Counter) {
 			defer wg.Done()
 			cnt.Increment()
-		}(i, c, wg)
+		}(i, c)
 	}
 
 	wg.Wait()
